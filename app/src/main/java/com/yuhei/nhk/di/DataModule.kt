@@ -2,7 +2,7 @@ package com.yuhei.nhk.di
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.yuhei.nhk.api.NowOnAirRemote
+import com.yuhei.nhk.api.ProgramRemote
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -38,5 +38,5 @@ class DataModule {
 
     @Singleton
     @Provides
-    fun provideProgramRemote(retrofit: Retrofit): NowOnAirRemote = retrofit.create(NowOnAirRemote::class.java)
+    fun provideProgramRemote(retrofit: Retrofit): ProgramRemote = retrofit.create(ProgramRemote::class.java)
 }

@@ -8,7 +8,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-interface NowOnAirRemote {
+interface ProgramRemote {
 
     @GET("list/{area}/{service}/{date}.json?key={apikey}")
     fun getProgramList(@Path("area") area: String,

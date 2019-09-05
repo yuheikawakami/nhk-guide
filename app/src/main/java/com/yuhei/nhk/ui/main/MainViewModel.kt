@@ -1,4 +1,4 @@
-package com.yuhei.nhk.ui
+package com.yuhei.nhk.ui.main
 
 import androidx.lifecycle.ViewModel
 import javax.inject.Inject

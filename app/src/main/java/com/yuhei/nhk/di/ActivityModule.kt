@@ -1,12 +1,18 @@
 package com.yuhei.nhk.di
 
-import com.yuhei.nhk.ui.MainActivity
+import androidx.lifecycle.ViewModelProvider
+import com.yuhei.nhk.ui.main.MainActivity
+import com.yuhei.nhk.ui.main.MainModule
+import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
 @Module
-interface ActivityModule {
+internal abstract class ActivityModule {
 
-    @ContributesAndroidInjector(modules = [MainActivityModule::class])
-    fun contributeMainActivity(): MainActivity
+    @Binds
+    abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
+
+    @ContributesAndroidInjector(modules = [MainModule::class])
+    internal abstract fun contributeMainActivity(): MainActivity
 }

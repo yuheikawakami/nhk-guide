@@ -1,4 +1,4 @@
-package com.yuhei.nhk.ui.main
+package com.yuhei.nhk.ui.program
 
 import androidx.lifecycle.ViewModel
 import com.yuhei.nhk.di.ViewModelKey
@@ -8,13 +8,13 @@ import dagger.android.ContributesAndroidInjector
 import dagger.multibindings.IntoMap
 
 @Module
-abstract class MainModule {
+abstract class ProgramListModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(MainViewModel::class)
-    abstract fun bindMainViewModel(viewModel: MainViewModel): ViewModel
+    @ViewModelKey(ProgramListViewModel::class)
+    abstract fun bindMainViewModel(viewModel: ProgramListViewModel): ViewModel
 
     @ContributesAndroidInjector
-    abstract fun contributeMainFragment(): MainFragment
+    abstract fun contributeMainFragment(): ProgramListFragment
 }

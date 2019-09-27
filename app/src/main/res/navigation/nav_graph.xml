@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_program">
+
+    <fragment
+        android:id="@+id/navigation_program"
+        android:name="com.yuhei.nhk.ui.program.ProgramListFragment"
+        android:label="@string/title_program_list"
+        tools:layout="@layout/fragment_program_list">
+
+        <action
+            android:id="@+id/action_program_to_program_detail"
+            app:destination="@+id/navigation_program_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_program_detail"
+        android:name="com.yuhei.nhk.ui.detail.ProgramDetailFragment"
+        android:label="@string/title_program_detail"
+        tools:layout="@layout/fragment_program_detail" />
+
+</navigation>

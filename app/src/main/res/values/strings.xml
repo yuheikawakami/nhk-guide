@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">nhk-guide</string>
 
+    <string name="title_program_list">番組一覧</string>
+    <string name="title_program_detail">番組詳細</string>
+
     <string name="api_error_title">エラー</string>
     <string name="api_error_message">通信に失敗しました</string>
 </resources>

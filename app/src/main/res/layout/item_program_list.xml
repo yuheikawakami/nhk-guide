@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:textStyle="bold"
@@ -26,16 +26,29 @@
         tools:text="ＮＨＫニュース　おはよう日本" />
 
     <TextView
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ellipsize="end"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:maxLines="5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/logo"
         app:layout_constraintTop_toBottomOf="@id/title"
-
         tools:text="▼おはＢｉｚ・働き盛りのランチを救うアイデア・飲食店を“社食化”できるサービスなど▼まちかど情報室・ぬらすと答えが出る地図など、楽しく教えてくれるアイデア" />
+
+    <TextView
+        android:id="@+id/start_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:gravity="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        tools:text="2019/10/1 午後7時〜" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

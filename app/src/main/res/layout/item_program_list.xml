@@ -3,25 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp">
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:mipmap/sym_def_app_icon" />
+    android:layout_height="176dp"
+    android:layout_margin="8dp"
+    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:background="#FFFF00"
+        android:ellipsize="end"
+        android:maxLines="3"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="ＮＨＫニュース　おはよう日本" />
 
@@ -29,26 +24,23 @@
         android:id="@+id/subtitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
         android:ellipsize="end"
         android:maxLines="5"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title"
         tools:text="▼おはＢｉｚ・働き盛りのランチを救うアイデア・飲食店を“社食化”できるサービスなど▼まちかど情報室・ぬらすと答えが出る地図など、楽しく教えてくれるアイデア" />
 
     <TextView
         android:id="@+id/start_time"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:ellipsize="end"
-        android:gravity="end"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/subtitle"
         tools:text="2019/10/1 午後7時〜" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

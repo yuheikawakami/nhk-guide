@@ -5,12 +5,12 @@ import com.xwray.groupie.kotlinandroidextensions.Item
 import com.yuhei.nhk.R
 import kotlinx.android.synthetic.main.item_program_list.view.*
 
-class ProgramListItem(private val title: String, private val subtitle: String, private val startTime: String) : Item() {
+class ProgramListItem(private val title: String, private val description: String, private val startTime: String) : Item() {
     override fun getLayout(): Int = R.layout.item_program_list
 
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
         viewHolder.itemView.title.text = title
-        viewHolder.itemView.subtitle.text = subtitle
+        viewHolder.itemView.subtitle.text = description
         viewHolder.itemView.start_time.text = startTime
     }
 }

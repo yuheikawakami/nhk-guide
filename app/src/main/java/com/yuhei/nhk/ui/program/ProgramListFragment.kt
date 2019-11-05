@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
+import com.xwray.groupie.Section
 import com.yuhei.nhk.R
 import kotlinx.android.synthetic.main.fragment_program_list.*
 
@@ -51,10 +52,12 @@ class ProgramListFragment : Fragment() {
                 "2019/10/1 午後7時〜")
         )
 
-
+        val section = Section()
+        section.setHeader(ProgramListHeaderItem("放送中"))
         items.forEach {
-            groupAdapter.add(it)
+            section.add(it)
         }
+        groupAdapter.add(section)
 
 //        text.setOnClickListener {
 //            findNavController().navigate(R.id.action_program_to_program_detail)
